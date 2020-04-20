@@ -20,25 +20,29 @@ int main(int argc, const char * argv[]) {
     MadLibsController *theController = new MadLibsController;
     std::vector<std::string> required_words;
     std::vector<std::string> words;
-    const char* file = "../madlibs1.txt";
+    const char* file = "madlibs1.txt";
 
 
     if(theController->readFile(file)) {
         theController->getSubstitutes(*theProvider);
         //Test 1
         words = theController->getWords();
-        std::string user_words;
+        string user_words;
         for(auto it=words.begin();it!=words.end();it++){
             user_words += *it;
             user_words += " ";
         }
         if(user_words == "verb adjective adjective pluralnoun adjective fruit name place adjective name color animal adjective adjective adjective noun number pluralnoun pluralnoun "){
-            std::cout << "Success" << std::endl;
+            cout << "Success" << endl;
         }
 
         //Test 2
         // Check if the passage output is correct.
         theController->showFinishedStory(cout);
+    }
+    else {
+        cout << " Failed reading madlibs1.txt" << endl;
+        return 1;
     }
 
 
