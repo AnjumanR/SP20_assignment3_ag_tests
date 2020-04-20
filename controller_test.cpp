@@ -32,7 +32,7 @@ int main(int argc, const char * argv[]) {
             user_words += *it;
             user_words += " ";
         }
-        if(user_words == ""verb adjective adjective pluralnoun adjective fruit name place adjective name color animal adjective adjective adjective noun number pluralnoun pluralnoun "){
+        if(user_words == "verb adjective adjective pluralnoun adjective fruit name place adjective name color animal adjective adjective adjective noun number pluralnoun pluralnoun "){
             std::cout << "Success" << std::endl;
         }
 
