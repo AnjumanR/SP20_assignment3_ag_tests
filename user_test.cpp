@@ -12,16 +12,26 @@ int main(int argc, const char * argv[]) {
     MadlibWordProvider *theProvider = new MadlibUserWordProvider;
     //Tests for each type of Substitute word
     // Test 1: Test for proper input
-    std::string word_type = "noun";
-    std::string out;
+    cout << "Testing first request: ";
+    string word_type = "noun";
+    string out;
     out = theProvider->getSubstituteWord(theProvider->getTypeForLabel(word_type));
     if(out == "spying") {
-        std::cout << "Success" << std::endl;
+        cout << "Success" << endl;
+    }
+    else {
+        cout << "FAILURE" << endl;
+        return 1;
     }
 
+    cout << "Testing second request: ";
     out = theProvider->getSubstituteWord(theProvider->getTypeForLabel(word_type));
     if(out == "brilliant") {
-        std::cout << "Success" << std::endl;
+        cout << "Success" << endl;
+    }
+    else {
+        cout << "FAILURE" << endl;
+        return 1;
     }
     return 0;
 }
