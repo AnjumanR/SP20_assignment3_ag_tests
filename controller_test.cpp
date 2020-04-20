@@ -7,10 +7,17 @@
 
 using namespace std;
 
+class MadlibEchoWordProvider : public MadlibWordProvider {
+    public:
+        virtual std::string getSubstituteWord(WordType aType) {
+            return getLabelForType(aType);
+        }
+}
+
 int main(int argc, const char * argv[]) {
 
     // Tests for User input based Madlibs.
-    MadlibWordProvider *theProvider = new MadlibUserWordProvider;
+    MadlibWordProvider *theProvider = new MadlibEchoWordProvider;
     MadLibsController *theController = new MadLibsController;
     std::vector<std::string> required_words;
     std::vector<std::string> words;
@@ -39,7 +46,7 @@ int main(int argc, const char * argv[]) {
             user_words += *it;
             user_words += " ";
         }
-        if(user_words == "spying brilliant powerful information sensitive apple Germans markets real rock grey cat fun unimaginable large laser-gun one friends enemies "){
+        if(user_words == ""verb adjective adjective pluralnoun adjective fruit name place adjective name color animal adjective adjective adjective noun number pluralnoun pluralnoun "){
             std::cout << "Success" << std::endl;
         }
 
@@ -51,46 +58,4 @@ int main(int argc, const char * argv[]) {
 
     delete theProvider;
     delete theController;
-
-
-    MadlibAutoWordProvider *theAutoProvider = new MadlibAutoWordProvider;
-    MadLibsController *theAutoController = new MadLibsController;
-
-    if (theAutoController->readFile(file)) {
-        theAutoController->getSubstitutes(*theAutoProvider);
-
-        //Test 4
-        // Check if the keywords picked in required_words are correct.
-        required_words = theAutoController->getRequiredWords();
-        std::string auto_out;
-        for(auto it=required_words.begin(); it!=required_words.end();it++){
-            auto_out += *it;
-            auto_out += " ";
-        }
-        //std::cout << auto_out << std::endl;
-        if(auto_out == "verb adjective adjective pluralnoun adjective fruit name place adjective name color animal adjective adjective adjective noun number pluralnoun pluralnoun "){
-            std::cout << "Success" << std::endl;
-        }
-
-        //Test 5
-        // Check if input is being fed in correctly from the auto generator.
-        words = theAutoController->getWords();
-        for(int i=0;i<words.size();i++) {
-            if (required_words[i] == "verb") {
-                if (words[i] == "be" || words[i] == "begin") {
-                    std::cout << "Success" << std::endl;
-                }
-            } else if (required_words[i] == "color") {
-                if (words[i] == "green" || words[i] == "blue" || words[i] == "purple") {
-                    std::cout << "Success" << std::endl;
-                }
-            } else if (required_words[i] == "name") {
-                if (words[i] == "Curry" || words[i] == "Thompson") {
-                    std::cout << "Success" << std::endl;
-                }
-            }
-        }
-    }
-    delete theAutoProvider;
-    delete theAutoController;
 }
