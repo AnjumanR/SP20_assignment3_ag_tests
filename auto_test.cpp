@@ -64,7 +64,7 @@ int main(int argc, const char * argv[]) {
     }
     
     //Test 5: Adverb
-    cout << "Testing Adjective Substitution: ";
+    cout << "Testing Adverb Substitution: ";
     word_type = "adverb";
     if(out == "scarcely" || out == "absentmindedly"){
         cout << "Success" << endl;
