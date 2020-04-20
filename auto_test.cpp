@@ -112,7 +112,7 @@ int main(int argc, const char * argv[]) {
     }
 
     //Test 9: Animal
-    cout << "Testing Fruit Substitution: ";    
+    cout << "Testing Animal Substitution: ";    
     word_type = "animal";
     out = theAutoProvider->getSubstituteWord(theAutoProvider->getTypeForLabel(word_type));
     if(out == "aardvark" || out == "bat" || out == "quail" || out == "rabbit"){
@@ -131,7 +131,7 @@ int main(int argc, const char * argv[]) {
         cout << "Success" << endl;
     }
     else {
-        cout << "FAILURE, returned word: " << out << endl;
+        cout << "FAILURE, returned word: " << out << " Type: " << word_type << " " << theAutoProvider->getTypeForLabel(word_type) << endl;
         return 1;
     }
     
