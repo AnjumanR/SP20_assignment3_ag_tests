@@ -66,6 +66,7 @@ int main(int argc, const char * argv[]) {
     //Test 5: Adverb
     cout << "Testing Adverb Substitution: ";
     word_type = "adverb";
+    out = theAutoProvider->getSubstituteWord(theAutoProvider->getTypeForLabel(word_type));
     if(out == "scarcely" || out == "absentmindedly"){
         cout << "Success" << endl;
     }
