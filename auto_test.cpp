@@ -23,7 +23,7 @@ int main(int argc, const char * argv[]) {
         cout << "Success" << endl;
     }
     else {
-        cout << "FAILURE" << endl;
+        cout << "FAILURE, returned word: " << out << endl;
         return 1;
     }
 
@@ -35,7 +35,7 @@ int main(int argc, const char * argv[]) {
         cout << "Success" << endl;
     }
     else {
-        cout << "FAILURE" << endl;
+        cout << "FAILURE, returned word: " << out << endl;
         return 1;
     }
 
@@ -47,7 +47,7 @@ int main(int argc, const char * argv[]) {
         cout << "Success" << endl;
     }
     else {
-        cout << "FAILURE" << endl;
+        cout << "FAILURE, returned word: " << out << endl;
         return 1;
     }
 
@@ -59,7 +59,7 @@ int main(int argc, const char * argv[]) {
         cout << "Success" << endl;
     }
     else {
-        cout << "FAILURE" << endl;
+        cout << "FAILURE, returned word: " << out << endl;
         return 1;
     }
     
@@ -71,7 +71,7 @@ int main(int argc, const char * argv[]) {
         cout << "Success" << endl;
     }
     else {
-        cout << "FAILURE" << endl;
+        cout << "FAILURE, returned word: " << out << endl;
         return 1;
     }
 
@@ -83,7 +83,7 @@ int main(int argc, const char * argv[]) {
         cout << "Success" << endl;
     }
     else {
-        cout << "FAILURE" << endl;
+        cout << "FAILURE, returned word: " << out << endl;
         return 1;
     }
 
@@ -95,7 +95,7 @@ int main(int argc, const char * argv[]) {
         cout << "Success" << endl;
     }
     else {
-        cout << "FAILURE" << endl;
+        cout << "FAILURE, returned word: " << out << endl;
         return 1;
     }
 
@@ -107,7 +107,7 @@ int main(int argc, const char * argv[]) {
         cout << "Success" << endl;
     }
     else {
-        cout << "FAILURE" << endl;
+        cout << "FAILURE, returned word: " << out << endl;
         return 1;
     }
 
@@ -119,7 +119,7 @@ int main(int argc, const char * argv[]) {
         cout << "Success" << endl;
     }
     else {
-        cout << "FAILURE" << endl;
+        cout << "FAILURE, returned word: " << out << endl;
         return 1;
     }
 
@@ -131,7 +131,7 @@ int main(int argc, const char * argv[]) {
         cout << "Success" << endl;
     }
     else {
-        cout << "FAILURE" << endl;
+        cout << "FAILURE, returned word: " << out << endl;
         return 1;
     }
     
