@@ -1,0 +1,43 @@
+g++ -std=c++11 user_test.cpp ../MadlibUserWordProvider.cpp ../MadLibsController.cpp -o user_test && ./user_test < input.txt
+Enter a noun: Success
+g++ -std=c++11 auto_test.cpp ../MadlibAutoWordProvider.cpp ../MadLibsController.cpp -o b && ./b
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+Success
+g++ -std=c++11 controller_test.cpp ../MadlibAutoWordProvider.cpp ../MadlibUserWordProvider.cpp ../MadLibsController.cpp -o b && ./b < input.txt
+Enter a verb: Enter a adjective: Enter a adjective: Enter a pluralnoun: Enter a adjective: Enter a fruit: Enter a name: Enter a place: Enter a adjective: Enter a name: Enter a color: Enter a animal: Enter a adjective: Enter a adjective: Enter a adjective: Enter a noun: Enter a number: Enter a pluralnoun: Enter a pluralnoun: 
+Success
+Success
+Your madlib is: 
+Espionage is the formal word for spying In the shadowy 
+world of spies, international organizations use brilliant 
+spies to infiltrate powerful groups for purpose of obtaining 
+top-secret information 
+For example, spies might have to crack the code for accessing 
+sensitive files. Sometimes the missions are far more 
+dangerous like stealing the key ingredient for making the award-winning 
+"Explosive apple pie", invented by Germans 
+Spies are found the world over in places like markets 
+but they are not allowed to reveal their real identities. 
+spy may be anyone includuing celebrities like rock and even the 
+little old lady with grey hair and the pet cat 
+The world of spying might seem glamorous and fun but it's filled 
+with unimaginable risks and large rewards! Sure, spies get to carry super-cool devices 
+like a laser-gun but they can't trust anyone. That's why the number 
+one rule for spies is "keep your friends close and your 
+enemies closer!". 
+
+
+Success
+Success
+Success
+Success
+Success
