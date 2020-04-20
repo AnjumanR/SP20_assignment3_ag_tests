@@ -1,9 +1,9 @@
 //
 // Created by Shreyas Rajesh on 4/19/20.
 //
-#include "../MadLibsController.hpp"
-#include "../MadlibUserWordProvider.hpp"
-#include "../MadlibAutoWordProvider.hpp"
+#include "MadLibsController.hpp"
+#include "MadlibUserWordProvider.hpp"
+#include "MadlibAutoWordProvider.hpp"
 
 using namespace std;
 
