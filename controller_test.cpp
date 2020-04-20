@@ -25,7 +25,7 @@ int main(int argc, const char * argv[]) {
     if(theController->readFile(file)) {
         theController->getSubstitutes(*theProvider);
         //Test 1
-        cout << "Testing word list identification using the echo word provider ";
+        cout << "Testing word list identification using the echo word provider: ";
         words = theController->getWords();
         string user_words;
         for(auto it=words.begin();it!=words.end();it++){
