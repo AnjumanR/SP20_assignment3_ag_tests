@@ -11,7 +11,7 @@ class MadlibEchoWordProvider : public MadlibWordProvider {
         virtual std::string getSubstituteWord(WordType aType) {
             return getLabelForType(aType);
         };
-}
+};
 
 int main(int argc, const char * argv[]) {
 
