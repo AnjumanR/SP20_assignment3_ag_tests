@@ -10,72 +10,131 @@ using namespace std;
 int main(int argc, const char * argv[]) {
     // Tests for Automatic input based Madlibs.
     MadlibWordProvider *theAutoProvider = new MadlibAutoWordProvider;
+    string out;
+    
     //Tests for each type of Substitute word
     // Test 1: Noun
-    std::string word_type = "noun";
-    std::string out;
+    cout << "Testing Noun Substitution: ";
+    string word_type = "noun";
     out = theAutoProvider->getSubstituteWord(theAutoProvider->getTypeForLabel(word_type));
     if(out == "aardvark"|| out == "bangladesh" || out == "bank" || out == "banker" || out == "bar" || out == "barber" || out == "bat"
     || out == "orange" || out == "blue" || out == "green" || out == "purple" || out == "apple" || out == "quail" || out == "rabbit"
     || out == "red" || out == "eight" || out == "five" || out == "fourth"){
-        std::cout << "Success" << std::endl;
+        cout << "Success" << endl;
+    }
+    else {
+        cout << "FAILURE" << endl;
+        return 1;
     }
 
     //Test 2: name
+    cout << "Testing Name Substitution: ";
     word_type = "name";
     out = theAutoProvider->getSubstituteWord(theAutoProvider->getTypeForLabel(word_type));
     if(out == "Thompson" || out == "Curry"){
-    std::cout << "Success" << std::endl;}
+        cout << "Success" << endl;
+    }
+    else {
+        cout << "FAILURE" << endl;
+        return 1;
+    }
 
     //Test 3: Verb
+    cout << "Testing Verb Substitution: ";
     word_type = "verb";
-    if(out == "be" || out == "begin"){
     out = theAutoProvider->getSubstituteWord(theAutoProvider->getTypeForLabel(word_type));
-    std::cout << "Success" << std::endl;}
+    if(out == "be" || out == "begin"){
+        cout << "Success" << endl;
+    }
+    else {
+        cout << "FAILURE" << endl;
+        return 1;
+    }
 
     //Test 4: Adjective
+    cout << "Testing Adjective Substitution: ";
     word_type = "adjective";
-    if(out == "courteous" || out == "crazy" || out == "scared"){
     out = theAutoProvider->getSubstituteWord(theAutoProvider->getTypeForLabel(word_type));
-    std::cout << "Success" << std::endl;}
-
+    if(out == "courteous" || out == "crazy" || out == "scared"){
+        cout << "Success" << endl;
+    }
+    else {
+        cout << "FAILURE" << endl;
+        return 1;
+    }
+    
     //Test 5: Adverb
+    cout << "Testing Adjective Substitution: ";
     word_type = "adverb";
     if(out == "scarcely" || out == "absentmindedly"){
-    out = theAutoProvider->getSubstituteWord(theAutoProvider->getTypeForLabel(word_type));
-    std::cout << "Success" << std::endl;}
+        cout << "Success" << endl;
+    }
+    else {
+        cout << "FAILURE" << endl;
+        return 1;
+    }
 
     //Test 6: Number
+    cout << "Testing Number Substitution: ";
     word_type = "number";
-    if(out == "eight" || out == "five" || out == "fourth"){
     out = theAutoProvider->getSubstituteWord(theAutoProvider->getTypeForLabel(word_type));
-    std::cout << "Success" << std::endl;}
+    if(out == "eight" || out == "five" || out == "fourth"){
+        cout << "Success" << endl;
+    }
+    else {
+        cout << "FAILURE" << endl;
+        return 1;
+    }
 
     //Test 7: Colour
+    cout << "Testing Color Substitution: ";
     word_type = "colour";
     out = theAutoProvider->getSubstituteWord(theAutoProvider->getTypeForLabel(word_type));
     if(out == "green" || out == "blue" || out == "purple"){
-    std::cout << "Success" << std::endl;}
+        cout << "Success" << endl;
+    }
+    else {
+        cout << "FAILURE" << endl;
+        return 1;
+    }
 
     //Test 8: Fruit
+    cout << "Testing Fruit Substitution: ";
     word_type = "fruit";
-
     out = theAutoProvider->getSubstituteWord(theAutoProvider->getTypeForLabel(word_type));
     if(out == "apple" || out == "orange"){
-    std::cout << "Success" << std::endl;}
+        cout << "Success" << endl;
+    }
+    else {
+        cout << "FAILURE" << endl;
+        return 1;
+    }
 
     //Test 9: Animal
+    cout << "Testing Fruit Substitution: ";    
     word_type = "animal";
     out = theAutoProvider->getSubstituteWord(theAutoProvider->getTypeForLabel(word_type));
     if(out == "aardvark" || out == "bat" || out == "quail" || out == "rabbit"){
-        std::cout << "Success" << std::endl;}
+        cout << "Success" << endl;
+    }
+    else {
+        cout << "FAILURE" << endl;
+        return 1;
+    }
 
     //Test 10: place
+    cout << "Testing Place Substitution: ";    
     word_type = "place";
     out = theAutoProvider->getSubstituteWord(theAutoProvider->getTypeForLabel(word_type));
     if(out == "bangladesh" || out == "bank"){
-    std::cout << "Success" << std::endl;}
-
+        cout << "Success" << endl;
+    }
+    else {
+        cout << "FAILURE" << endl;
+        return 1;
+    }
+    
+    return 0;
 }
 
 
