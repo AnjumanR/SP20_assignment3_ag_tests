@@ -37,6 +37,7 @@ int main(int argc, const char * argv[]) {
         }
         else {
             cout << "FAILURE" << endl;
+            cout << "List: " << user_words << endl
             return 1;
         }
 
