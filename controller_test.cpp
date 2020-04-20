@@ -22,10 +22,10 @@ int main(int argc, const char * argv[]) {
     std::vector<std::string> words;
     const char* file = "madlibs1.txt";
 
-
     if(theController->readFile(file)) {
         theController->getSubstitutes(*theProvider);
         //Test 1
+        cout << "Testing word list identification using the echo word provider ";
         words = theController->getWords();
         string user_words;
         for(auto it=words.begin();it!=words.end();it++){
@@ -35,6 +35,10 @@ int main(int argc, const char * argv[]) {
         if(user_words == "verb adjective adjective pluralnoun adjective fruit name place adjective name color animal adjective adjective adjective noun number pluralnoun pluralnoun "){
             cout << "Success" << endl;
         }
+        else {
+            cout << "FAILURE" << endl;
+            return 1;
+        }
 
         //Test 2
         // Check if the passage output is correct.
@@ -42,10 +46,11 @@ int main(int argc, const char * argv[]) {
     }
     else {
         cout << " Failed reading madlibs1.txt" << endl;
+        delete theProvider;
+        delete theController;
         return 1;
     }
-
-
     delete theProvider;
     delete theController;
+    return 0;
 }
