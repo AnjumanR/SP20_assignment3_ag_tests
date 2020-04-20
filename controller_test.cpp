@@ -26,19 +26,6 @@ int main(int argc, const char * argv[]) {
     if(theController->readFile(file)) {
         theController->getSubstitutes(*theProvider);
         //Test 1
-        // Check if the keywords picked in required_words are correct.
-        required_words = theController->getRequiredWords();
-        std::string user_out;
-        for(auto it=required_words.begin(); it!=required_words.end();it++){
-            user_out += *it;
-            user_out += " ";
-        }
-        if(user_out == "verb adjective adjective pluralnoun adjective fruit name place adjective name color animal adjective adjective adjective noun number pluralnoun pluralnoun "){
-            std::cout << "Success" << std::endl;
-        }
-
-        //Test 2
-        // Check if input is being fed in correctly from the user.
         words = theController->getWords();
         std::string user_words;
         for(auto it=words.begin();it!=words.end();it++){
@@ -49,7 +36,7 @@ int main(int argc, const char * argv[]) {
             std::cout << "Success" << std::endl;
         }
 
-        //Test 3
+        //Test 2
         // Check if the passage output is correct.
         theController->showFinishedStory(cout);
     }
