@@ -87,9 +87,9 @@ int main(int argc, const char * argv[]) {
         return 1;
     }
 
-    //Test 7: Colour
+    //Test 7: Color
     cout << "Testing Color Substitution: ";
-    word_type = "colour";
+    word_type = "color";
     out = theAutoProvider->getSubstituteWord(theAutoProvider->getTypeForLabel(word_type));
     if(out == "green" || out == "blue" || out == "purple"){
         cout << "Success" << endl;
