@@ -30,12 +30,26 @@ int main(int argc, const char * argv[]) {
         while (!line_stream1.eof() && !line_stream2.eof()) { // if both lines have another word, iterate
             line_stream1 >> word1;
             line_stream2 >> word2;
-            if (word1 != word2) return 3; // if words don't match, exit!
+            if (word1 != word2) 
+            {   
+                cout << "Token Mismatch" << endl;
+                cout << "Line from 1: " << line1 << endl;
+                cout << "Line from 2: " << line2 << endl;
+                return 3; // word mismatch!
+            }
         }
-        if (!line_stream1.eof() || !line_stream2.eof()) return 4; // lines do not have the same # of tokens
-
+        if (!line_stream1.eof() || !line_stream2.eof()) 
+        {   
+            cout << "Token Count Mismatch" << endl;
+            cout << "Line from 1: " << line1 << endl;
+            cout << "Line from 2: " << line2 << endl;
+            return 4; // lines do not have the same # of tokens
+        }
     }
-    if(!file1.eof() || !file2.eof()) return 5; // files do not have the same # of lines
-
+    if(!file1.eof() || !file2.eof()) 
+    {
+        cout << "The number of lines is incorrect" << endl;
+        return 5; // files do not have the same # of lines
+    }
     return 0;
 }
