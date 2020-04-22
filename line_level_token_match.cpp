@@ -38,6 +38,9 @@ int main(int argc, const char * argv[]) {
                 return 3; // word mismatch!
             }
         }
+        
+        line_stream1 >> ws;  // Consume potential whitespace at the end of lines
+        line_stream2 >> ws;
         if (!line_stream1.eof() || !line_stream2.eof()) 
         {   
             cout << "Token Count Mismatch" << endl;
